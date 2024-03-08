@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "he">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, 
+    initial-scale=1.0">
+    <title>כניסה</title>
+    <link rel = "stylesheet" href="signupstyle1.css">
+    <link href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel = 'stylesheet'>
+
+</head>
+
+<body dir="rtl">
+
+    <div class="wrapper">
+        <form id="signupForm">
+            <h1>הרשמה לתלמיד</h1>
+            <div class="input-box">
+                <input type = "text" id = "username" name = "username" maxlength = "15" placeholder="שם משתמש" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id = "password" name = "password" maxlength = "15" pattern = "^[a-zA-Z0-9]+$" placeholder="סיסמה" title = "Password must contain only alphanumeric characters" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <div class="input-box">
+                <input type="text" id = "idNumber" name = "idNumber" passwordmaxlength = "9" pattern = "[0-9]{9}" placeholder = "ת.ז" title = "ID number must contain 9 digits" required>
+                <i class='bx bx-id-card'></i>
+            </div>
+            <div class = "utype">
+                <!--label for = "userType">סוג משתמש:</label>
+                <select id = "userType" name = "userType" required>
+                    <option value = "parent">תלמיד</option>
+                    <option value = "teacher">הורה</option>
+                    <option value = "student">מורה</option>
+                </select>-->
+            </div>
+            <div class = "btn">
+                <button type ="submit">הירשם</button>
+            </div>
+            
+        </form>
+    </div>
+    <script src = "signupscript1.js"></script>
+</body>
