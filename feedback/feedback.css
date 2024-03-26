@@ -1,0 +1,10 @@
+#feedbackForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+textarea {
+    margin-bottom: 10px;
+}
