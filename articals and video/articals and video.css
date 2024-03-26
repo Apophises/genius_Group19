@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl; /* For Hebrew language support */
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+.resource-list {
+    list-style-type: none; / Remove default bullet points /
+    padding: 0;
+}
+
+.resource-list li {
+    margin-bottom: 10px; / Space between items /
+}
+
+.resource-list li img {
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 20px; / Adjusts the width of all icons uniformly /
+    height: auto; / Keeps the aspect ratio intact /
+}
+
+.resource-list a {
+    color: #007bff;
+    text-decoration: none; / Optional: Removes underline from links /
+}
+
+.resource-list a:hover {
+    text-decoration: underline; / Optional: Adds underline on hover */
+}
