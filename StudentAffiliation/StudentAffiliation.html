@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>הוספת תלמיד</title>
+    <link rel="stylesheet" href="StudentAffiliation.css">
+</head>
+<body>
+    <h2>הוסף תלמיד</h2>
+    <form id="addStudentForm">
+        <input type="text" id="studentId" placeholder="תעודת זהות של התלמיד">
+        <button type="submit">הוספה</button>
+    </form>
+    <div id="errorMessage" style="color: red; display: none;">תעודת זהות חייבת להכיל בדיוק 9
+      ספרות.</div>
+
+    <div id="studentsList"></div>
+    <script src="StudentAffiliation.js"></script>
+</body>
+</html>
