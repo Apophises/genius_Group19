@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "he">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, 
+    initial-scale=1.0">
+    <title>כניסה</title>
+    <link rel = "stylesheet" href = "loginstyle2.css">
+    <link href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel = 'stylesheet'>
+
+</head>
+
+<body dir="rtl">
+
+    <div class="wrapper">
+        <form id="loginForm">
+            <h1>כניסה</h1>
+            <div class="input-box">
+                <input type="text" id="username" placeholder="שם משתמש" required>
+                <i class='bx bxs-user'></i>
+                <p class="error-name">שם משתמש לא נכון</p>
+            </div>
+            
+            <div class="input-box">
+                <input type="password" id="password" placeholder="סיסמה" required>
+                <i class='bx bxs-lock-alt' ></i>
+                <p class="error-password">סיסמה לא נכונה</p>
+            </div>
+
+            <div class="remember-forgot">
+                <!--label for="chek"><input type="checkbox" id="chek">תזכור אותי</label>
+                <a href="#">שכחתי סיסמה</a>-->
+            </div>
+
+            <div class="btn">
+                <input type="submit" value="כניסה">
+            </div>
+
+            <div class="register-link">
+                <p>אין משתמש?<a
+                     href="signup2.html">יצירת משתמש חדש</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="loginscript2.js"></script>
+</body>
+
+</html>
