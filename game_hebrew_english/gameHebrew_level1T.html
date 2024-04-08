@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>משחק בעברית רמה 1</title>
+    <link rel="stylesheet" href="gameHebrew_level1.css">
+</head>
+<body>
+    <h1>Genius</h1>
+    
+    <div class="navbar">
+        <ul>
+            <li><a href="menuT.html">בית</a></li>
+            <li><a href="avatarT.html">בחירת אווטאר</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">משחקים</a>
+                <div class="dropdown-content">
+                    <div class="sub-dropdown">
+                        <a href="#">משחקים בעברית</a>
+                        <div class="sub-dropdown-content">
+                            <a href="gameHebrew_level1T.html">משחק 1</a>
+                            <a href="gameHebrew_level2T.html">משחק 2</a>
+                            <a href="gameHebrew_level3T.html">משחק 3</a>
+                        </div>
+                    </div>
+                    <div class="sub-dropdown">
+                        <a href="#">משחקים באנגלית</a>
+                        <div class="sub-dropdown-content">
+                            <a href="gameEnglish_level1T.html">משחק 1</a>
+                            <a href="gameEnglish_level2T.html">משחק 2</a>
+                            <a href="gameEnglish_level3T.html">משחק 3</a>
+                        </div>
+                    </div>
+                    <div class="sub-dropdown">
+                        <a href="#">משחקים בחשבון</a>
+                        <div class="sub-dropdown-content">
+                            <a href="gameMath_level1T.html">משחק 1</a>
+                            <a href="gameMath_level2T.html">משחק 2</a>
+                            <a href="gameMath_level3T.html">משחק 3</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="feedbackT.html">משוב</a></li>
+            <li><a href="StudentAffiliationT.html">שיוך ילדים</a></li>
+            <li><a href="articals and videoT.html">מאמרים</a></li>
+            
+            <li><a href="javascript:void(0)" onclick="logout()">התנתקות</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function logout() {
+            // Remove username and user type from session storage
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("status");
+            
+            window.location.href = "startpage.html";
+        }
+    </script>
+
+
+
+
+    <div id="game">
+        <h2 id="stage-description">לחץ על הכפתור כדי לשמוע את המילה</h2>
+        <button id="play-sound">השמע מילה</button>
+        <h2 id="stage-description">לחץ על האות שבה מתחילה המילה ששמעת</h2>
+        <div id="options"></div>
+    
+    </div>
+    <audio id="wordSound" src=""></audio>
+    <script src="gameHebrew_level1T.js"></script>
+</body>
+</html>
