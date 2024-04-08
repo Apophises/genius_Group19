@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang = "he">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <title>עמוד ראשי</title>
+    <link rel = "stylesheet" href = "startpagestyle.css">
+    <link href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel = 'stylesheet'>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1 id="genius">genius</h1>
+        <div class="btn">
+            <!-- כפתור הכניסה עם הפעולה למעבר לדף הבא -->
+            <button id="enter-button1" type="submit" onclick="location.href='login1.html'" >תלמיד</button>
+        </div>
+        
+        <div class="btn">
+            <!-- כפתור הכניסה עם הפעולה למעבר לדף הבא -->
+            <button id="enter-button2" type="submit" onclick="location.href='login2.html'" >הורה</button>
+        </div>
+
+        <div class="btn">
+            <!-- כפתור הכניסה עם הפעולה למעבר לדף הבא -->
+            <button id="enter-button3" type="submit" onclick="location.href='login3.html'" >מורה</button>
+        </div>
+    </div>
+    <script>
+        const enterButton1 = document.getElementById('enter-button1');
+        enterButton1.addEventListener('click', function () {
+        window.location.href = 'login1.html';
+    });
+    const enterButton2 = document.getElementById('enter-button2');
+        enterButton2.addEventListener('click', function () {
+        window.location.href = 'login2.html';
+    });
+    const enterButton3 = document.getElementById('enter-button3');
+        enterButton3.addEventListener('click', function () {
+        window.location.href = 'login3.html';
+    });
+
+    const indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+    const request = indexedDB.open("userDatabase");
+
+    request.onupgradeneeded = (event) => {
+        const db = event.target.result;
+
+        db.onerror = (event) => {
+            console.error("Error loading database: ", event.target.error);
+        };
+
+        // Create an objectStore for this database
+        const avatarStore = db.createObjectStore("avatars", { keyPath: "username", autoIncrement: true });
+        avatarStore.createIndex("username", "username", { unique: false });
+
+        // Create a new object store for feedback
+        const feedbackStore = db.createObjectStore("feedbacks", { keyPath: "username", autoIncrement: true });
+        feedbackStore.createIndex("username", "username", { unique: false });
+
+        const usersStore = db.createObjectStore("users", { keyPath: "id", autoIncrement: true });
+        usersStore.createIndex("username", "username", { unique: true });
+        usersStore.createIndex("id", "id", { unique: true });
+        
+        const affiliationStore = db.createObjectStore("affiliation", { keyPath: "username" });
+        affiliationStore.createIndex("username", "username", { unique: true });
+    };
+
+    request.onerror = function(event) {
+        console.error("Database error: ", event.target.error);
+    };
+    </script>
+
+</body>
+</html>
